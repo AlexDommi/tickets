@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Areas">
+            <fields>
+                <field type="STRING" length="255" name="areas_codigo_k" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="areas_descripcion" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.CfgAgentes">
+            <fields>
+                <field type="STRING" length="255" name="cfg_agente_nombre" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="areas_codigo_k" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="observaciones" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="agentesquerytres" content="SELECT c &#13;&#10;FROM CfgAgentes c " returnType="com.company.model.CfgAgentes">
+                    <queryParameters/>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Clientes">
+            <fields>
+                <field type="STRING" length="255" name="nombre" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="razonsocial" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="pais" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Clientespruebadet">
+            <fields>
+                <field type="STRING" length="255" name="instancia" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="udn" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Clientespruebaenc">
+            <fields>
+                <field type="STRING" length="255" name="nombreCliente" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="razonSocial" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="pais" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Clientespruebadet" fetchType="LAZY" name="detalle" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.RegistroDeInstancias">
+            <fields>
+                <field type="STRING" length="255" name="instancia_codigo_k" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="instancia_udn" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="instancia_descripcion" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Tickets">
+            <fields>
+                <field type="STRING" length="255" name="nombre_agente" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="areas_codigo_k" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="nombre_cliente" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="instancia_codigo_k" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="observaciones" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
