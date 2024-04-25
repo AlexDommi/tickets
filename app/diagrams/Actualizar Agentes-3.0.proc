@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/bpm/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_dOjOQAJ4Ee-RDcI1u6nkcA" name="Actualizar Agentes" version="3.0" bonitaModelVersion="8">
-    <elements xmi:type="process:Pool" xmi:id="_dOjOQQJ4Ee-RDcI1u6nkcA" name="Actualizar Agentes" version="3.0">
+    <elements xmi:type="process:Pool" xmi:id="_dOjOQQJ4Ee-RDcI1u6nkcA" name="Actualizar AgentesS" version="3.0">
       <elements xmi:type="process:Lane" xmi:id="_dOjOQgJ4Ee-RDcI1u6nkcA" name="Ennovacore" actor="_dOjOZAJ4Ee-RDcI1u6nkcA">
         <elements xmi:type="process:StartEvent" xmi:id="_dOjOQwJ4Ee-RDcI1u6nkcA" name="actualizar agentes existentes" outgoing="_dOjOXgJ4Ee-RDcI1u6nkcA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_dOjORAJ4Ee-RDcI1u6nkcA" name="" content="" returnTypeFixed="true"/>
@@ -51,7 +51,9 @@
       <configurations xmi:type="configuration:Configuration" xmi:id="_dOjOZQJ4Ee-RDcI1u6nkcA" name="Production" version="8" username="william.jobs">
         <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_dOjOZgJ4Ee-RDcI1u6nkcA">
           <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_dOjOZwJ4Ee-RDcI1u6nkcA" name="Employee actor">
-            <groups xmi:type="actormapping:Groups" xmi:id="_dOjOaAJ4Ee-RDcI1u6nkcA"/>
+            <groups xmi:type="actormapping:Groups" xmi:id="_dOjOaAJ4Ee-RDcI1u6nkcA">
+              <group>/acme</group>
+            </groups>
             <memberships xmi:type="actormapping:Membership" xmi:id="_dOjOaQJ4Ee-RDcI1u6nkcA"/>
             <roles xmi:type="actormapping:Roles" xmi:id="_dOjOagJ4Ee-RDcI1u6nkcA"/>
             <users xmi:type="actormapping:Users" xmi:id="_dOjOawJ4Ee-RDcI1u6nkcA"/>
