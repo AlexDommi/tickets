@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/bpm/configuration" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/bpm/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_d1-fMPaGEe6zg_10Gfsqtw" name="Registro De Instancias" bonitaModelVersion="8">
     <elements xmi:type="process:Pool" xmi:id="_d1-fMfaGEe6zg_10Gfsqtw" name="Registro de Instancias">
       <elements xmi:type="process:Lane" xmi:id="_d1_GQPaGEe6zg_10Gfsqtw" name="Registro de Instancias" actor="_d1_GWfaGEe6zg_10Gfsqtw">
@@ -62,69 +62,6 @@
           <referencedElements xmi:type="process:ContractInput" xmi:id="_7qO1UPaKEe6zg_10Gfsqtw" name="instanciasInput" type="COMPLEX"/>
         </defaultValue>
       </data>
-      <connectors xmi:type="process:Connector" xmi:id="_sJiPwP2qEe66FZD-DOmQbA" name="postgresEnnova" definitionId="database-postgresql92" event="ON_FINISH" definitionVersion="1.0.0">
-        <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_sJiPwf2qEe66FZD-DOmQbA" definitionId="database-postgresql92" version="1.0.0" modelVersion="8">
-          <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sJiPwv2qEe66FZD-DOmQbA" key="driver">
-            <expression xmi:type="expression:Expression" xmi:id="_sJiPw_2qEe66FZD-DOmQbA" name="org.postgresql.Driver" content="org.postgresql.Driver" returnTypeFixed="true"/>
-          </parameters>
-          <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sJiPxP2qEe66FZD-DOmQbA" key="url">
-            <expression xmi:type="expression:Expression" xmi:id="_sJiPxf2qEe66FZD-DOmQbA" name="jdbc:postgresql://localhost:5432/postgres" content="jdbc:postgresql://localhost:5432/postgres" returnTypeFixed="true"/>
-          </parameters>
-          <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sJiPxv2qEe66FZD-DOmQbA" key="script">
-            <expression xmi:type="expression:Expression" xmi:id="_sJiPx_2qEe66FZD-DOmQbA" name="query" content="SELECT *&#xA;  FROM &#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
-          </parameters>
-          <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sJiPyP2qEe66FZD-DOmQbA" key="username">
-            <expression xmi:type="expression:Expression" xmi:id="_sJiPyf2qEe66FZD-DOmQbA" name="postgres" content="postgres" returnTypeFixed="true"/>
-          </parameters>
-          <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sJiPyv2qEe66FZD-DOmQbA" key="password">
-            <expression xmi:type="expression:Expression" xmi:id="_sJiPy_2qEe66FZD-DOmQbA" name="N0vacore" content="N0vacore" returnTypeFixed="true"/>
-          </parameters>
-          <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sJiPzP2qEe66FZD-DOmQbA" key="separator">
-            <expression xmi:type="expression:Expression" xmi:id="_sJiPzf2qEe66FZD-DOmQbA" returnTypeFixed="true"/>
-          </parameters>
-          <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sJiPzv2qEe66FZD-DOmQbA" key="outputType">
-            <expression xmi:type="expression:Expression" xmi:id="_sJiPz_2qEe66FZD-DOmQbA" returnTypeFixed="true"/>
-          </parameters>
-          <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sJiP0P2qEe66FZD-DOmQbA" key="wizardMode">
-            <expression xmi:type="expression:Expression" xmi:id="_sJiP0f2qEe66FZD-DOmQbA" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          </parameters>
-        </configuration>
-        <outputs xmi:type="expression:Operation" xmi:id="_sJiP0v2qEe66FZD-DOmQbA">
-          <leftOperand xmi:type="expression:Expression" xmi:id="_sJiP0_2qEe66FZD-DOmQbA"/>
-          <rightOperand xmi:type="expression:Expression" xmi:id="_sJiP1P2qEe66FZD-DOmQbA" name="resultset" content="resultset" type="CONNECTOR_OUTPUT_TYPE" returnType="java.sql.ResultSet">
-            <referencedElements xmi:type="definition:Output" xmi:id="_sJiP1f2qEe66FZD-DOmQbA" name="resultset" type="java.sql.ResultSet"/>
-          </rightOperand>
-          <operator xmi:type="expression:Operator" xmi:id="_sJiP1v2qEe66FZD-DOmQbA" type="ASSIGNMENT"/>
-        </outputs>
-        <outputs xmi:type="expression:Operation" xmi:id="_sJiP1_2qEe66FZD-DOmQbA">
-          <leftOperand xmi:type="expression:Expression" xmi:id="_sJiP2P2qEe66FZD-DOmQbA"/>
-          <rightOperand xmi:type="expression:Expression" xmi:id="_sJiP2f2qEe66FZD-DOmQbA" name="singleResult" content="singleResult" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
-            <referencedElements xmi:type="definition:Output" xmi:id="_sJiP2v2qEe66FZD-DOmQbA" name="singleResult" type="java.lang.Object"/>
-          </rightOperand>
-          <operator xmi:type="expression:Operator" xmi:id="_sJiP2_2qEe66FZD-DOmQbA" type="ASSIGNMENT"/>
-        </outputs>
-        <outputs xmi:type="expression:Operation" xmi:id="_sJiP3P2qEe66FZD-DOmQbA">
-          <leftOperand xmi:type="expression:Expression" xmi:id="_sJiP3f2qEe66FZD-DOmQbA"/>
-          <rightOperand xmi:type="expression:Expression" xmi:id="_sJiP3v2qEe66FZD-DOmQbA" name="oneRowNColResult" content="oneRowNColResult" type="CONNECTOR_OUTPUT_TYPE" returnType="java.util.List">
-            <referencedElements xmi:type="definition:Output" xmi:id="_sJiP3_2qEe66FZD-DOmQbA" name="oneRowNColResult" type="java.util.List"/>
-          </rightOperand>
-          <operator xmi:type="expression:Operator" xmi:id="_sJiP4P2qEe66FZD-DOmQbA" type="ASSIGNMENT"/>
-        </outputs>
-        <outputs xmi:type="expression:Operation" xmi:id="_sJiP4f2qEe66FZD-DOmQbA">
-          <leftOperand xmi:type="expression:Expression" xmi:id="_sJiP4v2qEe66FZD-DOmQbA"/>
-          <rightOperand xmi:type="expression:Expression" xmi:id="_sJiP4_2qEe66FZD-DOmQbA" name="nRowOneColResult" content="nRowOneColResult" type="CONNECTOR_OUTPUT_TYPE" returnType="java.util.List">
-            <referencedElements xmi:type="definition:Output" xmi:id="_sJiP5P2qEe66FZD-DOmQbA" name="nRowOneColResult" type="java.util.List"/>
-          </rightOperand>
-          <operator xmi:type="expression:Operator" xmi:id="_sJiP5f2qEe66FZD-DOmQbA" type="ASSIGNMENT"/>
-        </outputs>
-        <outputs xmi:type="expression:Operation" xmi:id="_sJiP5v2qEe66FZD-DOmQbA">
-          <leftOperand xmi:type="expression:Expression" xmi:id="_sJiP5_2qEe66FZD-DOmQbA"/>
-          <rightOperand xmi:type="expression:Expression" xmi:id="_sJiP6P2qEe66FZD-DOmQbA" name="tableResult" content="tableResult" type="CONNECTOR_OUTPUT_TYPE" returnType="java.util.List">
-            <referencedElements xmi:type="definition:Output" xmi:id="_sJiP6f2qEe66FZD-DOmQbA" name="tableResult" type="java.util.List"/>
-          </rightOperand>
-          <operator xmi:type="expression:Operator" xmi:id="_sJiP6v2qEe66FZD-DOmQbA" type="ASSIGNMENT"/>
-        </outputs>
-      </connectors>
       <formMapping xmi:type="process:FormMapping" xmi:id="_d1_GUvaGEe6zg_10Gfsqtw">
         <targetForm xmi:type="expression:Expression" xmi:id="_gPdQUPaMEe6zg_10Gfsqtw" name="RegistroDeInstancias" content="a0df1260-1539-4076-94dd-cc299e218cf0" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
