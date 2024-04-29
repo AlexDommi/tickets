@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "539b0ff5-7c8a-44b2-bf6b-74804878680f",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1714413284147,
+  "lastUpdate" : 1714414105266,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -146,10 +146,10 @@
           },
           "pageSize" : {
             "type" : "constant",
-            "value" : 8
+            "value" : 10
           },
           "filter" : {
-            "type" : "expression"
+            "type" : "constant"
           },
           "striped" : {
             "type" : "constant",
@@ -157,7 +157,7 @@
           },
           "condensed" : {
             "type" : "constant",
-            "value" : false
+            "value" : true
           },
           "bordered" : {
             "type" : "constant",
@@ -681,7 +681,7 @@
     "agentesdb" : {
       "type" : "url",
       "value" : [
-        "../API/bdm/businessData/com.company.model.CfgAgentes?q=agentesquerytres&p=0&c=10"
+        "../API/bdm/businessData/com.company.model.CfgAgentes?q=agentesquerytres&p=0&c=100000"
       ],
       "exposed" : false
     },
