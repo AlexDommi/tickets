@@ -36,8 +36,8 @@
       <formMapping xmi:type="process:FormMapping" xmi:id="_dOjOWgJ4Ee-RDcI1u6nkcA">
         <targetForm xmi:type="expression:Expression" xmi:id="_dOjOWwJ4Ee-RDcI1u6nkcA" name="ActualizacionDeAgentes" content="539b0ff5-7c8a-44b2-bf6b-74804878680f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
-      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_dOjOXAJ4Ee-RDcI1u6nkcA">
-        <targetForm xmi:type="expression:Expression" xmi:id="_dOjOXQJ4Ee-RDcI1u6nkcA" name="ActualizacionDeAgentes" content="bcd48fd4-23a1-4a65-a8c3-6c14a5707875" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_dOjOXAJ4Ee-RDcI1u6nkcA" type="NONE">
+        <targetForm xmi:type="expression:Expression" xmi:id="_dOjOXQJ4Ee-RDcI1u6nkcA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_dOjOXgJ4Ee-RDcI1u6nkcA" target="_dOjOSwJ4Ee-RDcI1u6nkcA" source="_dOjOQwJ4Ee-RDcI1u6nkcA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_dOjOXwJ4Ee-RDcI1u6nkcA"/>
