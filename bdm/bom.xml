@@ -56,6 +56,14 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.Pruebaalex">
+            <fields>
+                <field type="STRING" length="255" name="nombre" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.RegistroDeInstancias">
             <fields>
                 <field type="STRING" length="255" name="instancia_codigo_k" nullable="false" collection="false"/>
