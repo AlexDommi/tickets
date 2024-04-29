@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/bpm/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
-  <process:MainProcess xmi:id="_dOjOQAJ4Ee-RDcI1u6nkcA" name="Actualizar Agentes" version="3.0" bonitaModelVersion="8">
-    <elements xmi:type="process:Pool" xmi:id="_dOjOQQJ4Ee-RDcI1u6nkcA" name="Actualizar AgentesS" version="3.0">
+  <process:MainProcess xmi:id="_dOjOQAJ4Ee-RDcI1u6nkcA" name="Actualizar Agentes" bonitaModelVersion="8">
+    <elements xmi:type="process:Pool" xmi:id="_dOjOQQJ4Ee-RDcI1u6nkcA" name="Actualizar Agentes">
       <elements xmi:type="process:Lane" xmi:id="_dOjOQgJ4Ee-RDcI1u6nkcA" name="Ennovacore" actor="_dOjOZAJ4Ee-RDcI1u6nkcA">
         <elements xmi:type="process:StartEvent" xmi:id="_dOjOQwJ4Ee-RDcI1u6nkcA" name="actualizar agentes existentes" outgoing="_dOjOXgJ4Ee-RDcI1u6nkcA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_dOjORAJ4Ee-RDcI1u6nkcA" name="" content="" returnTypeFixed="true"/>
@@ -34,7 +34,7 @@
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_dOjOWgJ4Ee-RDcI1u6nkcA">
-        <targetForm xmi:type="expression:Expression" xmi:id="_dOjOWwJ4Ee-RDcI1u6nkcA" name="ActualizacionDeAgentes3" content="539b0ff5-7c8a-44b2-bf6b-74804878680f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_dOjOWwJ4Ee-RDcI1u6nkcA" name="ActualizacionDeAgentes" content="539b0ff5-7c8a-44b2-bf6b-74804878680f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_dOjOXAJ4Ee-RDcI1u6nkcA">
         <targetForm xmi:type="expression:Expression" xmi:id="_dOjOXQJ4Ee-RDcI1u6nkcA" name="ActualizacionDeAgentes" content="bcd48fd4-23a1-4a65-a8c3-6c14a5707875" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

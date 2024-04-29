@@ -2,9 +2,9 @@
   "id" : "ActualizacionDeAgentes",
   "name" : "ActualizacionDeAgentes",
   "type" : "form",
-  "uuid" : "bcd48fd4-23a1-4a65-a8c3-6c14a5707875",
+  "uuid" : "539b0ff5-7c8a-44b2-bf6b-74804878680f",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1713989684611,
+  "lastUpdate" : 1714414432036,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -25,17 +25,48 @@
             "type" : "constant",
             "value" : false
           },
-          "disabled" : {
-            "type" : "constant",
-            "value" : false
-          },
           "allowHTML" : {
             "type" : "constant",
             "value" : true
           },
-          "label" : {
+          "text" : {
             "type" : "interpolation",
             "value" : "Nuevo Agente"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "process"
+          },
+          "targetUrl" : {
+            "type" : "constant",
+            "value" : "http://"
+          },
+          "pageToken" : {
+            "type" : "constant"
+          },
+          "processName" : {
+            "type" : "constant",
+            "value" : "Registro de Agentes"
+          },
+          "processVersion" : {
+            "type" : "constant",
+            "value" : "1.0"
+          },
+          "taskId" : {
+            "type" : "expression"
+          },
+          "caseId" : {
+            "type" : "constant"
+          },
+          "target" : {
+            "type" : "constant",
+            "value" : "_self"
+          },
+          "appToken" : {
+            "type" : "constant"
+          },
+          "urlParams" : {
+            "type" : "constant"
           },
           "alignment" : {
             "type" : "constant",
@@ -44,59 +75,11 @@
           "buttonStyle" : {
             "type" : "constant",
             "value" : "primary"
-          },
-          "action" : {
-            "type" : "constant",
-            "value" : "Open modal"
-          },
-          "assign" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "url" : {
-            "type" : "interpolation"
-          },
-          "responseStatusCode" : {
-            "type" : "variable"
-          },
-          "dataToSend" : {
-            "type" : "constant"
-          },
-          "dataFromSuccess" : {
-            "type" : "variable"
-          },
-          "closeOnSuccess" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "dataFromError" : {
-            "type" : "variable"
-          },
-          "targetUrlOnSuccess" : {
-            "type" : "interpolation",
-            "value" : "/bonita/apps/userAppBonita/task-list/"
-          },
-          "collectionToModify" : {
-            "type" : "variable"
-          },
-          "modalId" : {
-            "type" : "constant",
-            "value" : "nuevoagente"
-          },
-          "collectionPosition" : {
-            "type" : "constant",
-            "value" : "Last"
-          },
-          "valueToAdd" : {
-            "type" : "constant"
-          },
-          "removeItem" : {
-            "type" : "variable"
           }
         },
-        "reference" : "be19df78-c770-4061-aa0e-752477bda08a",
+        "reference" : "36af9b8d-f82e-45ab-824c-792daac311b0",
         "hasValidationError" : false,
-        "id" : "pbButton"
+        "id" : "pbLink"
       }
     ],
     [
@@ -128,8 +111,19 @@
             "type" : "constant",
             "value" : [
               "Nombre",
-              "Área"
+              "Área",
+              "Observaciones"
             ]
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "Variable"
+          },
+          "apiUrl" : {
+            "type" : "expression"
+          },
+          "params" : {
+            "type" : "constant"
           },
           "content" : {
             "type" : "expression",
@@ -139,12 +133,23 @@
             "type" : "constant",
             "value" : [
               "cfg_agente_nombre",
-              "areas_codigo_k"
+              "areas_codigo_k",
+              "observaciones"
             ]
+          },
+          "sortColumns" : {
+            "type" : "constant"
           },
           "selectedRow" : {
             "type" : "variable",
             "value" : "agentedb"
+          },
+          "pageSize" : {
+            "type" : "constant",
+            "value" : 10
+          },
+          "filter" : {
+            "type" : "constant"
           },
           "striped" : {
             "type" : "constant",
@@ -152,20 +157,20 @@
           },
           "condensed" : {
             "type" : "constant",
-            "value" : false
+            "value" : true
           },
           "bordered" : {
             "type" : "constant",
             "value" : false
           },
-          "modalId" : {
+          "modalid" : {
             "type" : "constant",
             "value" : "ModActualizarAgentes"
           }
         },
-        "reference" : "9325bc30-3440-4305-ade1-5dd21fcb9279",
+        "reference" : "d2879418-f360-48f4-abac-75a02a0e48d3",
         "hasValidationError" : false,
-        "id" : "customTableModalEnabled"
+        "id" : "customDatatableModal"
       }
     ],
     [
@@ -195,7 +200,7 @@
             "value" : true
           }
         },
-        "reference" : "b2ceed94-af46-48bd-a4c6-19b7ac275dd1",
+        "reference" : "8bdff7a6-da13-48dc-bc38-3b77d6341593",
         "hasValidationError" : false,
         "id" : "pbModalContainer",
         "container" : {
@@ -204,7 +209,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "0bd0d39a-c03c-46a5-9a69-28215397bc7d",
+          "reference" : "ce734e88-2915-4086-82f6-324b3939b1b5",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -288,7 +293,7 @@
                     "value" : 1
                   }
                 },
-                "reference" : "120cccb1-c58b-4a38-b647-641873560ded",
+                "reference" : "bdb550d1-a3dd-4c0e-be7d-0be89ffd4cc8",
                 "hasValidationError" : false,
                 "id" : "pbInput"
               }
@@ -359,7 +364,7 @@
                     "value" : "agentedb.areas_codigo_k"
                   }
                 },
-                "reference" : "8e1c7323-4d9c-44cd-b22b-7c0afbd6c1dc",
+                "reference" : "91eed481-cc7d-4bc8-932a-5a692df5e431",
                 "hasValidationError" : false,
                 "id" : "pbSelect"
               }
@@ -382,10 +387,6 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "readOnly" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
                   "required" : {
                     "type" : "constant",
                     "value" : false
@@ -401,6 +402,10 @@
                   "maxLength" : {
                     "type" : "constant",
                     "value" : ""
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : false
                   },
                   "labelHidden" : {
                     "type" : "constant",
@@ -418,14 +423,35 @@
                     "type" : "constant",
                     "value" : 4
                   },
+                  "placeholder" : {
+                    "type" : "interpolation"
+                  },
                   "value" : {
                     "type" : "variable",
                     "value" : "agentedb.observaciones"
+                  },
+                  "debounce" : {
+                    "type" : "constant",
+                    "value" : 0
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "text"
+                  },
+                  "min" : {
+                    "type" : "constant"
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
                   }
                 },
-                "reference" : "fe593178-bb45-4cd9-a8a2-a5a2475b056c",
+                "reference" : "fc08a2f3-56b6-49a0-a4d7-e6ba47b2a6ca",
                 "hasValidationError" : false,
-                "id" : "pbTextarea"
+                "id" : "pbInput"
               }
             ],
             [
@@ -517,7 +543,7 @@
                     "type" : "variable"
                   }
                 },
-                "reference" : "794dc7dd-c826-46da-9427-91897b92d57b",
+                "reference" : "b4aacae6-36fa-4636-9f8a-9c2c32557b08",
                 "hasValidationError" : false,
                 "id" : "pbButton"
               }
@@ -608,7 +634,7 @@
                     "type" : "variable"
                   }
                 },
-                "reference" : "dd2e1ee5-5119-4be6-9f77-08bcb9e7fd3b",
+                "reference" : "150dd5ce-dd1e-4736-8af5-edc3df06ee69",
                 "hasValidationError" : false,
                 "id" : "pbButton"
               }
@@ -644,7 +670,8 @@
         "\t\t//map expenseReport variable to expected task contract input",
         "\t    actualizaragenteInput: {",
         "\t\t\tcfg_agente_nombre: $data.agentedb.cfg_agente_nombre !== undefined ? $data.agentedb.cfg_agente_nombre : null,",
-        "\t\t\tareas_codigo_k: $data.agentedb.areas_codigo_k !== undefined ? $data.agentedb.areas_codigo_k : null",
+        "\t\t\tareas_codigo_k: $data.agentedb.areas_codigo_k !== undefined ? $data.agentedb.areas_codigo_k : null,",
+        "\t\t\tobservaciones: $data.agentedb.observaciones !== undefined ? $data.agentedb.observaciones : null",
         "\t\t}",
         "\t}",
         "}"
@@ -654,7 +681,7 @@
     "agentesdb" : {
       "type" : "url",
       "value" : [
-        "../API/bdm/businessData/com.company.model.CfgAgentes?q=agentesquerytres&p=0&c=10"
+        "../API/bdm/businessData/com.company.model.CfgAgentes?q=agentesquerytres&p=0&c=100000"
       ],
       "exposed" : false
     },
